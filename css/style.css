@@ -1,0 +1,31 @@
+/* !********** CUSTOM VARIABLES ********* */
+:root {
+  /* *** FONTS *** */
+  --primary-font-family: ;
+  --heading-font-family: ;
+
+  /* *** COLORS *** */
+  --primary-background-color: ;
+  --secondary-background-color: ;
+  --tertiary-background-color: ;
+  --primary-color: ;
+  --secondary-color: ;
+  --tertiary-color: ;
+}
+
+/* !********** GENERAL ********* */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-background-color);
+  font-size: 16px;
+  font-family: var(--primary-font-family);
+  color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* ********** MEDIA QUERIES ********* */
