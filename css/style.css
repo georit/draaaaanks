@@ -314,9 +314,9 @@ header input:focus {
   top: 1rem;
   background-color: var(--secondary-background-color);
   color: var(--primary-background-color);
-  padding: 0.3rem 0.6rem;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  padding: 0.4rem 0.9rem 0.4rem 0.6rem;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -366,18 +366,18 @@ header input:focus {
 }
 
 .popup {
-  background-color: var(--secondary-background-color);
-  max-width: 94%;
-  width: 100%;
+  background-color: var(--primary-background-color);
+  width: 96%;
+  /* width: 100%; */
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  padding: 0 1rem;
+  padding: 0 1rem 3rem;
   position: relative;
   overflow: auto;
-  max-height: 95%;
+  height: 98%;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -395,9 +395,14 @@ header input:focus {
   text-transform: capitalize;
 }
 
+.drink-info h3 {
+  text-transform: uppercase;
+}
+
 .drink-info h1,
 .drink-info h3 {
-  padding-bottom: 3px;
+  color: var(--secondary-color);
+  padding-bottom: 4px;
   position: relative;
   text-align: center;
 }
@@ -405,7 +410,8 @@ header input:focus {
 .drink-info h1::after,
 .drink-info h3::after {
   content: "";
-  border-bottom: 2px solid var(--primary-background-color);
+  border-bottom: 2px solid var(--secondary-background-color);
+  border-radius: 100%;
   width: 10%;
   background-color: var(--primary-background-color);
   position: absolute;
@@ -418,6 +424,12 @@ header input:focus {
   -o-transform: translateX(-50%);
 }
 
+.drink-info .mix-img {
+  width: 70%;
+  height: auto;
+  border-radius: 5px;
+}
+
 .drink-info ul {
   list-style-type: none;
   padding: 0;
@@ -427,28 +439,28 @@ header input:focus {
   align-items: center;
 }
 
-.drink-info .recipe-ingridients li {
+.drink-info .mix-ingredients li {
   display: inline-flex;
-  padding: 6px;
-  background-color: var(--primary-background-color);
-  margin: 2.5px 2px;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-  color: var(--secondary-background-color);
-  box-shadow: 0 0 2px #b13d20;
+  padding: 6px 12px;
+  background-color: var(--secondary-background-color);
+  margin: 4px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  color: var(--tertiary-color);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   font-size: 0.9rem;
 }
 
-.drink-info .cook-instructions {
+.drink-info .mix-instructions {
   display: block;
   padding: 0.5rem 1rem 1rem;
-  border: 5px dotted var(--primary-background-color);
+  border: 4px dotted var(--secondary-background-color);
 }
 
-.drink-info .cook-instructions li {
+.drink-info .mix-instructions li {
   display: inline-block;
   text-align: left;
   padding-top: 10px;
@@ -457,13 +469,13 @@ header input:focus {
 
 #btn-close-popup {
   position: fixed;
-  top: 3%;
-  right: 4%;
+  top: 0%;
+  right: 0%;
   background-color: transparent;
   border: none;
-  font-size: 1.8rem;
+  font-size: 2rem;
   cursor: pointer;
-  color: var(--primary-color);
+  color: var(--secondary-background-color);
 }
 
 /* ***** Copyright info ***** */

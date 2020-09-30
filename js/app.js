@@ -89,7 +89,7 @@ function addDrink(drinkData, random = false) {
 		${
       random
         ? `<span class="random">
-		Random Recipe
+		Random Cocktail
 	</span>`
         : ""
     }
@@ -266,7 +266,7 @@ function addInstruction() {
   // Add style to instruction
 }
 
-// Show recipe instructions and ingredients
+// Show mix instructions and ingredients
 function showDrinkInfo(drinkData) {
   // toggle scroll on body
   toggleScrollOnBody();
@@ -288,25 +288,27 @@ function showDrinkInfo(drinkData) {
     }
   }
 
-  // Get cooking instructions
+  // Get mixing instructions
   const instructions = drinkData.strInstructions
     .split("\n")
     .filter((i) => i.trim() !== "");
 
-  // Inject ingredients and cooking instructions into user interface
+  // Inject ingredients and mixing instructions into user interface
   drinkEl.innerHTML = `
 	<h1>${drinkData.strDrink}</h1>
-	<img src="${drinkData.strDrinkThumb}" alt="${drinkData.strDrink}">
+	<img src="${drinkData.strDrinkThumb}" alt="${
+    drinkData.strDrink
+  }" class="mix-img">
 	<h3>Ingredients</h3>
-	<ul class="recipe-ingridients">
+	<ul class="mix-ingredients">
 	${ingredients.map((ingredient) => `<li>${ingredient}</li>`).join("")}
 	</ul>
 	<h3>Instructions</h3>    
-	<ul class="cook-instructions">
+	<ul class="mix-instructions">
 	${instructions.map((instruct) => `<li>${instruct}</li>`).join("")}
 	</ul>`;
 
-  // Add recipe info to popup display
+  // Add mix info to popup display
   drinkInfoElement.appendChild(drinkEl);
 
   // Show the popup
