@@ -65,14 +65,19 @@ async function getDrinkById(id) {
 
 // Fetch drinks from API based on a specific search term
 async function getDrinksBySearch(term) {
-  const response = await fetch(
-    `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${term}`
-  );
+  try {
+    const response = await fetch(
+      `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${term}`
+    );
 
-  const drinkData = await response.json();
-  const drinks = drinkData.drinks;
+    const drinkData = await response.json();
 
-  return drinks;
+    const drinks = drinkData.drinks;
+
+    return drinks;
+  } catch {
+    showErrorMessage();
+  }
 }
 
 // Inject drink info into user interface
@@ -332,7 +337,7 @@ async function searchForDrinks() {
       getDrinkById(drink.idDrink).then(addDrink);
       drinksElement.classList.remove("no-results-for-search");
     });
-  } else {
+  } /*else {
     // displace search results message
     drinksElement.innerHTML = `
 	<img class="no-results-for-search-img" src="./img/sad_face.png">
@@ -342,7 +347,20 @@ async function searchForDrinks() {
 
     // center search results message
     drinksElement.style.justifyContent = "center";
-  }
+  }*/
+}
+
+// Show error message
+function showErrorMessage() {
+  // displace search results message
+  drinksElement.innerHTML = `
+    <img class="no-results-for-search-img" src="./img/sad_face.png">
+    <p>No search results for <span class="search-word">"${searchTerm.value}"</span>, try searching for a different drink or ingredient.</p>
+    `;
+  drinksElement.classList.add("no-results-for-search");
+
+  // center search results message
+  drinksElement.style.justifyContent = "center";
 }
 
 // Show clear search button

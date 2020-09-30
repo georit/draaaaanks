@@ -9,7 +9,7 @@
   --secondary-background-color: #21bf73;
   --tertiary-background-color: #ffffff;
   --primary-color: #4c4c4c;
-  --secondary-color: #fd5e53;
+  --secondary-color: #a5a5a5;
   --tertiary-color: #b0eacd;
 }
 
@@ -137,7 +137,7 @@ header {
 header input {
   width: 60%;
   padding: 0.5rem 1rem;
-  border: 1px solid var(--tertiary-color);
+  border: 1px solid rgba(165, 165, 165, 0.3);
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
   border-top-right-radius: 0;
@@ -147,12 +147,13 @@ header input {
   -moz-appearance: none;
   -webkit-appearance: none;
   position: relative;
+  color: var(--primary-color);
 }
 
-/* header ::placeholder {
-  color: var(--secondary-background-color);
+header ::placeholder {
+  color: var(--secondary-color);
   opacity: 1;
-} */
+}
 
 header input:focus {
   outline: none;
@@ -172,8 +173,8 @@ header input:focus {
 
 .btn-search {
   background-color: var(--tertiary-background-color);
-  color: var(--secondary-background-color);
-  border: 1px solid var(--tertiary-color);
+  color: var(--primary-color);
+  border: 1px solid rgba(165, 165, 165, 0.3);
   padding: 0.5rem 0.6rem;
   border-left: none;
   border-top-right-radius: 25px;
@@ -206,9 +207,9 @@ header input:focus {
 
 .fav-container h3::after {
   content: "";
-  border-bottom: 3px solid var(--tertiary-color);
-  border-radius: 2px;
-  width: 10%;
+  border-bottom: 1.5px solid var(--primary-background-color);
+  border-radius: 100%;
+  width: 15%;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -278,7 +279,7 @@ header input:focus {
 }
 
 .no-results-for-search {
-  color: var(--secondary-background-color);
+  color: var(--primary-color);
   text-align: center;
   padding: 8.49vh 7.26vw;
 }
@@ -286,6 +287,10 @@ header input:focus {
 .no-results-for-search-img {
   width: 50%;
   height: auto;
+}
+
+.search-word {
+  color: var(--secondary-background-color);
 }
 
 .drink {
@@ -463,13 +468,21 @@ header input:focus {
 
 /* ***** Copyright info ***** */
 .copy {
-  color: var(--secondary-background-color);
+  color: var(--secondary-color);
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   font-weight: 400;
   margin: 0;
   padding: 10vh 0 1vh;
   padding: 1vh 0 10px;
+}
+
+.copy .fa-heart {
+  color: var(--secondary-background-color);
+}
+
+.dev-name {
+  font-size: 0.75rem;
 }
 
 /* ********** MEDIA QUERIES ********* */
