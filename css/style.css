@@ -162,8 +162,8 @@ header input:focus {
 .btn-clear-search {
   top: 33%;
   right: 26.5%;
-  font-size: 0.85rem;
-  color: var(--tertiary-color);
+  font-size: 0.75rem;
+  color: var(--secondary-color);
   display: none;
 }
 
@@ -498,3 +498,38 @@ header input:focus {
 }
 
 /* ********** MEDIA QUERIES ********* */
+@media only screen and (min-width: 750px) {
+  body {
+    background-color: var(--tertiary-background-color);
+    padding: 1vh 0;
+  }
+
+  .mobile-container {
+    width: 750px;
+    min-height: 100vh;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    border-radius: 25px;
+  }
+
+  .popup {
+    width: 500px;
+    border-radius: 25px;
+  }
+
+  .drink-info .mix-img {
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  header .input {
+    width: 50%;
+  }
+
+  .fav-drinks li span {
+    font-size: 0.6rem;
+    width: 60px;
+  }
+}
