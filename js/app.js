@@ -339,17 +339,7 @@ async function searchForDrinks() {
       getDrinkById(drink.idDrink).then(addDrink);
       drinksElement.classList.remove("no-results-for-search");
     });
-  } /*else {
-    // displace search results message
-    drinksElement.innerHTML = `
-	<img class="no-results-for-search-img" src="./img/sad_face.png">
-	<p>No search results for "${search}", try searching for a different drink or ingredient.</p>
-	`;
-    drinksElement.classList.add("no-results-for-search");
-
-    // center search results message
-    drinksElement.style.justifyContent = "center";
-  }*/
+  }
 }
 
 // Show error message
