@@ -4,6 +4,7 @@
   "short_name": "Cocktaily",
   "start_url": ".",
   "display": "standalone",
+  "background-color": "#f9fcfb",
   "theme-color": "#21bf73",
   "icons": [
     {
