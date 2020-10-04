@@ -23,7 +23,7 @@
 }
 
 body {
-  background-color: var(--primary-background-color);
+  background-color: var(--secondary-background-color);
   font-size: 16px;
   font-family: var(--primary-font-family);
   color: var(--primary-color);
@@ -111,7 +111,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 99;
-  background-color: var(--primary-background-color);
+  background-color: var(--secondary-background-color);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -138,7 +138,7 @@ header {
   font-size: 2rem;
   background-color: transparent;
   border: none;
-  color: var(--secondary-background-color);
+  color: var(--primary-background-color);
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -220,12 +220,12 @@ header input:focus {
 .fav-container {
   padding: 60px 0.5rem 0;
   text-align: center;
-  background-color: var(--secondary-background-color);
+  background-color: var(--tertiary-background-color);
   min-height: 33vh;
 }
 
 .fav-container h3 {
-  color: var(--primary-background-color);
+  color: var(--primary-color);
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   margin: 0.5rem 1rem 2rem;
@@ -235,7 +235,7 @@ header input:focus {
 
 .fav-container h3::after {
   content: "";
-  border-bottom: 1.5px solid var(--primary-background-color);
+  border-bottom: 1.5px solid var(--secondary-color);
   border-radius: 100%;
   width: 15%;
   position: absolute;
@@ -278,7 +278,7 @@ header input:focus {
 }
 
 .fav-drinks li span {
-  color: var(--primary-background-color);
+  color: var(--primary-color);
   font-size: 0.8rem;
   display: inline-block;
   overflow: hidden;
@@ -298,7 +298,7 @@ header input:focus {
   width: 80%;
   padding-top: 3vh;
   text-transform: uppercase;
-  color: var(--primary-background-color);
+  color: var(--primary-color);
 }
 
 /* ***** Drinks ***** */
@@ -491,7 +491,7 @@ header input:focus {
 }
 
 .drink-info .mix-instructions li {
-  color: var(--secondary-color);
+  color: var(--primary-color);
   display: inline-block;
   text-align: left;
   padding-top: 10px;
