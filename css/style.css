@@ -18,6 +18,10 @@
   box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  width: 0px;
+}
+
 body {
   background-color: var(--primary-background-color);
   font-size: 16px;
@@ -29,6 +33,7 @@ body {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+  -webkit-overflow-scrolling: auto;
 }
 
 html,
@@ -99,23 +104,29 @@ mobile-container::-webkit-scrollbar {
 header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  position: relative;
+  justify-content: space-between;
+  padding: 0 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: var(--primary-background-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
   height: 57px;
   width: auto;
-  position: absolute;
+  /*position: absolute;
   top: 5px;
-  left: 5px;
+  left: 5px;*/
 }
 
 .get-random-drink {
-  position: absolute;
+  /*position: absolute;
   top: 5px;
-  right: 5px;
+  right: 5px;*/
   height: 57px;
   width: 57px;
   display: flex;
@@ -134,8 +145,16 @@ header {
   cursor: pointer;
 }
 
+.search-container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
 header input {
-  width: 60%;
+  width: 85%;
   padding: 0.5rem 1rem;
   border: 1px solid rgba(165, 165, 165, 0.3);
   border-top-left-radius: 25px;
@@ -155,14 +174,23 @@ header ::placeholder {
   opacity: 1;
 }
 
+:-ms-input-placeholder {
+  color: var(--secondary-color);
+}
+
+::-ms-input-placeholder {
+  color: var(--secondary-color);
+}
+
 header input:focus {
   outline: none;
 }
 
 .btn-clear-search {
-  top: 33%;
-  right: 26.5%;
-  font-size: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12%;
+  font-size: 0.8rem;
   color: var(--secondary-color);
   display: none;
 }
@@ -181,7 +209,7 @@ header input:focus {
   border-bottom-right-radius: 25px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  margin-left: -0.5px;
+  margin-left: 0;
   cursor: pointer;
   appearance: none;
   -moz-appearance: none;
@@ -190,10 +218,10 @@ header input:focus {
 
 /* ***** Favorites Container ***** */
 .fav-container {
-  padding: 0.25rem 0.5rem 0;
+  padding: 60px 0.5rem 0;
   text-align: center;
   background-color: var(--secondary-background-color);
-  min-height: 20vh;
+  min-height: 33vh;
 }
 
 .fav-container h3 {
@@ -246,7 +274,7 @@ header input:focus {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border: 2px solid var(--tertiary-color);
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
 }
 
 .fav-drinks li span {
@@ -358,23 +386,24 @@ header input:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 
 .popup-container.hidden {
   opacity: 0;
   pointer-events: none;
+  position: relative;
 }
 
 .popup {
   background-color: var(--primary-background-color);
   width: 96%;
-  /* width: 100%; */
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  padding: 0 1rem 3rem;
+  padding: 2rem 1rem 3rem;
   position: relative;
   overflow: auto;
   height: 98%;
@@ -428,6 +457,7 @@ header input:focus {
   width: 70%;
   height: auto;
   border-radius: 5px;
+  object-fit: cover;
 }
 
 .drink-info ul {
@@ -461,6 +491,7 @@ header input:focus {
 }
 
 .drink-info .mix-instructions li {
+  color: var(--secondary-color);
   display: inline-block;
   text-align: left;
   padding-top: 10px;
@@ -469,13 +500,14 @@ header input:focus {
 
 #btn-close-popup {
   position: fixed;
-  top: 0%;
-  right: 0%;
+  top: 3%;
+  right: -2%;
   background-color: transparent;
   border: none;
   font-size: 2rem;
   cursor: pointer;
   color: var(--secondary-background-color);
+  z-index: 200;
 }
 
 /* ***** Copyright info ***** */
@@ -502,6 +534,12 @@ header input:focus {
   body {
     background-color: var(--tertiary-background-color);
     padding: 1vh 0;
+  }
+
+  header {
+    width: 750px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .mobile-container {

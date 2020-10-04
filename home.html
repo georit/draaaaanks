@@ -105,13 +105,15 @@
     <div class="mobile-container">
       <header>
         <img src="./img/logo.png" alt="logo" class="logo" />
-        <input type="text" id="search-term" placeholder="Search" />
-        <button class="btn btn-clear btn-clear-search">
-          <i class="fas fa-times-circle"></i>
-        </button>
-        <button class="btn btn-search" id="btn-search">
-          <i class="fas fa-search"></i>
-        </button>
+        <div class="search-container">
+          <input type="text" id="search-term" placeholder="Search" />
+          <button class="btn btn-clear btn-clear-search">
+            <i class="fas fa-times-circle"></i>
+          </button>
+          <button class="btn btn-search" id="btn-search">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
         <div class="get-random-drink">
           <button class="btn btn-randomize" id="btn-randomize">
             <i class="fas fa-random"></i>
@@ -125,11 +127,10 @@
       <div class="drinks" id="drinks"></div>
 
       <div class="popup-container hidden" id="drink-popup">
+        <button id="btn-close-popup">
+          <i class="fas fa-times-circle"></i>
+        </button>
         <div class="popup">
-          <button id="btn-close-popup">
-            <i class="fas fa-times-circle"></i>
-          </button>
-
           <div class="drink-info" id="drink-info"></div>
         </div>
       </div>
