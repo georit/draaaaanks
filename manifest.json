@@ -1,6 +1,6 @@
 {
   "name": "Cocktaily",
-  "description": "The best place to find new cocktail recipes. Please drink responsibly",
+  "description": "The best place to find new cocktail recipes. Please remember to drink responsibly",
   "short_name": "Cocktaily",
   "start_url": ".",
   "display": "standalone",
@@ -39,5 +39,7 @@
     }
   ],
   "lang": "en",
-  "dir": "ltr"
+  "dir": "ltr",
+  "manifest_version": 2,
+  "version": "1.0.0"
 }
